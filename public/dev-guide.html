@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Development Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #8A2BE2;
+            border-bottom: 2px solid #8A2BE2;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #9370DB;
+            margin-top: 30px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #8A2BE2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #5D0099;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Harsh Pandey Portfolio - Development Guide</h1>
+        
+        <h2>Opening the Portfolio Website</h2>
+        <p>To view the portfolio website, simply open the <code>index.html</code> file directly in your web browser.</p>
+        
+        <h2>Starting a Local Development Server</h2>
+        <p>If you have Python installed, you can start a simple HTTP server:</p>
+        
+        <h3>Using Python (Python 3):</h3>
+        <pre><code>python -m http.server</code></pre>
+        <p>Then open <a href="http://localhost:8000">http://localhost:8000</a> in your browser</p>
+        
+        <h3>Using Python (Python 2):</h3>
+        <pre><code>python -m SimpleHTTPServer</code></pre>
+        <p>Then open <a href="http://localhost:8000">http://localhost:8000</a> in your browser</p>
+        
+        <h3>Using Node.js:</h3>
+        <p>If you have Node.js installed, you can run:</p>
+        <pre><code>npx http-server</code></pre>
+        <p>Then open the URL displayed in the terminal (usually http://localhost:8080)</p>
+        
+        <h2>Editing Files</h2>
+        <p>You can edit the portfolio files with any text editor or IDE:</p>
+        <ul>
+            <li><strong>index.html</strong> - Main HTML structure</li>
+            <li><strong>index.css</strong> - Styling and animations</li>
+            <li><strong>script.js</strong> - Interactive functionality and animations</li>
+        </ul>
+        
+        <a href="index.html" class="btn">Open Portfolio</a>
+    </div>
+</body>
+</html>

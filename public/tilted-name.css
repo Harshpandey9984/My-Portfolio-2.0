@@ -1,0 +1,175 @@
+/* Tilted Name Animation for Harsh Pandey */
+.tilted-name-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: hidden;
+}
+
+.tilted-name {
+    font-size: 12vw;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    position: absolute;
+    color: rgba(138, 43, 226, 0.07); /* Subtle purple in dark mode */
+    white-space: nowrap;
+    transform-origin: center;
+    opacity: 0;
+    user-select: none;
+    animation: pulsateOpacity 6s infinite alternate ease-in-out;
+    text-shadow: 0 0 2px rgba(138, 43, 226, 0.04); /* Subtle glow effect */
+    -webkit-text-stroke: 0.5px rgba(138, 43, 226, 0.08); /* Subtle outline for better visibility */
+}
+
+@keyframes pulsateOpacity {
+    0% { opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { opacity: 0.95; }
+}
+
+/* Optimize animations for better performance on lower-end devices */
+@media (prefers-reduced-motion: reduce) {
+    .tilted-name {
+        animation: none;
+    }
+    
+    .tilted-name-container:hover .tilted-name {
+        transform: none;
+        transition: none;
+    }
+}
+
+/* First tilted name (bottom) */
+.tilted-name:nth-child(1) {
+    transform: translateY(25vh) rotate(-15deg) scale(1.2);
+    z-index: 1;
+}
+
+/* Second tilted name (middle) */
+.tilted-name:nth-child(2) {
+    transform: translateY(0vh) rotate(10deg) scale(1.2);
+    z-index: 2;
+}
+
+/* Third tilted name (top) */
+.tilted-name:nth-child(3) {
+    transform: translateY(-25vh) rotate(-5deg) scale(1.2);
+    z-index: 3;
+}
+
+/* Fallback for browsers that don't support animations well */
+.tilted-name-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(138, 43, 226, 0.02) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Light mode adjustments */
+html.light-theme .tilted-name {
+    color: rgba(138, 43, 226, 0.08); /* Slightly darker in light mode for visibility */
+    text-shadow: 0 0 2px rgba(138, 43, 226, 0.06); /* Enhanced text shadow for better visibility */
+    -webkit-text-stroke: 0.5px rgba(138, 43, 226, 0.1); /* Stronger stroke in light mode */
+    filter: drop-shadow(0 0 2px rgba(138, 43, 226, 0.05)); /* Additional drop shadow for depth */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .tilted-name {
+        font-size: 15vw;
+    }
+
+    .tilted-name:nth-child(1) {
+        transform: translateY(20vh) rotate(-10deg) scale(1.2);
+    }
+    
+    .tilted-name:nth-child(2) {
+        transform: translateY(0vh) rotate(8deg) scale(1.2);
+    }
+    
+    .tilted-name:nth-child(3) {
+        transform: translateY(-20vh) rotate(-4deg) scale(1.2);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tilted-name {
+        font-size: 16vw;
+        letter-spacing: 0.05em;
+    }
+    
+    .tilted-name:nth-child(1) {
+        transform: translateY(15vh) rotate(-8deg) scale(1);
+    }
+    
+    .tilted-name:nth-child(2) {
+        transform: translateY(0vh) rotate(5deg) scale(1);
+    }
+    
+    .tilted-name:nth-child(3) {
+        transform: translateY(-15vh) rotate(-3deg) scale(1);
+    }
+}
+
+/* Animation for name reveal when scrolling */
+@keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(30vh) rotate(-20deg) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(25vh) rotate(-15deg) scale(1.2);
+    }
+}
+
+@keyframes fadeInRotateMiddle {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(20deg) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(10deg) scale(1.2);
+    }
+}
+
+@keyframes fadeInRotateTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-30vh) rotate(-10deg) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-25vh) rotate(-5deg) scale(1.2);
+    }
+}
+
+/* Hover effects for subtle animation */
+.tilted-name-container:hover .tilted-name:nth-child(1) {
+    transform: translateY(26vh) rotate(-14deg) scale(1.22);
+    transition: transform 1s ease;
+}
+
+.tilted-name-container:hover .tilted-name:nth-child(2) {
+    transform: translateY(1vh) rotate(9deg) scale(1.22);
+    transition: transform 1.2s ease;
+}
+
+.tilted-name-container:hover .tilted-name:nth-child(3) {
+    transform: translateY(-24vh) rotate(-6deg) scale(1.22);
+    transition: transform 1.4s ease;
+}

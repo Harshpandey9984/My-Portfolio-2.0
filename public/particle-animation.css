@@ -1,0 +1,187 @@
+/* Advanced particle animations for the hero section */
+
+/* Additional particle effects for the hero section */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(138, 43, 226, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 0;
+}
+
+.particle-1 {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    top: 20%;
+    animation: float-particle-1 15s ease-in-out infinite;
+}
+
+.particle-2 {
+    width: 150px;
+    height: 150px;
+    left: 75%;
+    top: 60%;
+    animation: float-particle-2 20s ease-in-out infinite;
+}
+
+.particle-3 {
+    width: 80px;
+    height: 80px;
+    left: 40%;
+    top: 80%;
+    animation: float-particle-3 25s ease-in-out infinite;
+}
+
+.particle-4 {
+    width: 120px;
+    height: 120px;
+    left: 85%;
+    top: 15%;
+    animation: float-particle-4 18s ease-in-out infinite;
+}
+
+.particle-5 {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+    top: 65%;
+    animation: float-particle-5 22s ease-in-out infinite;
+}
+
+@keyframes float-particle-1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+    25% {
+        transform: translate(40px, 20px) scale(1.2) rotate(45deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(80px, 0) scale(1.4) rotate(90deg);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translate(40px, -20px) scale(1.2) rotate(45deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float-particle-2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.4;
+    }
+    25% {
+        transform: translate(-50px, 30px) scale(1.1) rotate(-60deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-100px, 0) scale(1.2) rotate(-120deg);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(-50px, -30px) scale(1.1) rotate(-60deg);
+        opacity: 0.2;
+    }
+}
+
+@keyframes float-particle-3 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+    33% {
+        transform: translate(60px, -40px) scale(1.3) rotate(120deg);
+        opacity: 0.5;
+    }
+    66% {
+        transform: translate(-60px, -40px) scale(1.3) rotate(240deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float-particle-4 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.4;
+    }
+    30% {
+        transform: translate(-70px, 50px) scale(1.2) rotate(-45deg);
+        opacity: 0.6;
+    }
+    60% {
+        transform: translate(0, 100px) scale(1.4) rotate(-90deg);
+        opacity: 0.4;
+    }
+    85% {
+        transform: translate(70px, 50px) scale(1.2) rotate(-45deg);
+        opacity: 0.2;
+    }
+}
+
+@keyframes float-particle-5 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+    25% {
+        transform: translate(30px, -50px) scale(1.15) rotate(30deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(60px, -100px) scale(1.3) rotate(60deg);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translate(30px, -150px) scale(1.15) rotate(30deg);
+        opacity: 0.3;
+    }
+}
+
+/* Interactive particles that respond to mouse movement */
+.interactive-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(138, 43, 226, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.8s ease;
+    z-index: 0;
+}
+
+/* Media queries for responsive particles */
+@media screen and (max-width: 768px) {
+    .particle-1, .particle-2, .particle-3, .particle-4, .particle-5 {
+        display: none; /* Hide larger particles on small screens */
+    }
+    
+    .hero::before, .hero::after {
+        background-size: 30px 30px; /* Smaller pattern on mobile */
+    }
+}
+
+/* Dynamic pattern animation for extra effect */
+.hero .bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238a2be2' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+    animation: patternMove 40s linear infinite;
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200px 200px;
+    }
+}

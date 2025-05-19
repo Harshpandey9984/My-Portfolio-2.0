@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Pandey | Portfolio</title>    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="flip-cards.css">
+    <link rel="stylesheet" href="filter-buttons.css">
+    <link rel="stylesheet" href="project-animations.css">
+    <link rel="stylesheet" href="mobile-touch.css">
+    <link rel="stylesheet" href="3d-name.css">
+    <link rel="stylesheet" href="particle-animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Three.js Library -->    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    <script src="script-new.js"></script>
+    <script src="flip-cards.js"></script>
+    <script src="project-animations.js"></script>
+    <script src="mobile-touch.js"></script>
+    <script src="3d-name.js"></script>
+    <script src="particle-animation.js"></script>
+</head>
+<body>    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">HP</div>        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="theme-switch"></div>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Added animated glowing orb effect -->
+        <div class="glow-orb"></div>
+        
+        <!-- Added background pattern and particles -->
+        <div class="bg-pattern"></div>
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        
+        <div class="hero-content">
+            <!-- 3D Hero Name -->
+            <div class="hero-3d-name" data-text="HARSH PANDEY">
+                <h1>HARSH PANDEY</h1>
+                <h1 class="text-glow">HARSH PANDEY</h1>
+            </div>
+            <div class="typed-container">
+                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </div>
+            <p>Third Year Computer Science Student</p>            <div class="hero-buttons">
+                <a href="#contact" class="btn primary-btn">Contact Me</a>
+                <a href="#projects" class="btn secondary-btn">View Projects</a>
+                <a href="#" class="btn resume-btn" download><i class="fas fa-download"></i> Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>            <div class="about-content">                <div class="about-img" data-aos="fade-right" data-aos-duration="1200">
+                    <div class="img-border">
+                        <img src="assets/images/profile.jpg" alt="Harsh Pandey">
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1200">
+                    <h3>Front-End Developer & Blockchain Enthusiast</h3>                    <p>
+                        Dedicated professional with a developing expertise in front-end development and blockchain technology, 
+                        skilled in programming and web3 applications. My key achievements include excelling in coursework 
+                        related to Data Structures and Algorithms, and Database Management Systems.
+                    </p>
+                    <p>
+                        Seeking a Front-End Developer position at a forward-thinking company, where I can bring my programming 
+                        and blockchain skills to support your mission of advancing innovative and user-friendly digital solutions.
+                    </p>
+                    <p>
+                        Currently pursuing a Bachelor's degree in Computer Science and Engineering, I am actively looking for
+                        challenging internship opportunities to gain valuable industry experience while applying my technical skills.
+                    </p>                    <div class="about-details">                        <div class="detail"><i class="fas fa-map-marker-alt"></i> Bhopal, M.P, India</div>
+                        <div class="detail"><i class="fas fa-phone"></i> <a href="tel:9199668058">9199668058</a></div>
+                        <div class="detail"><i class="fas fa-envelope"></i> <a href="mailto:hp7556513@gmail.com">hp7556513@gmail.com</a></div>
+                        <div class="detail"><i class="fab fa-github"></i> <a href="https://github.com/Harshpandey9984" target="_blank">github.com/Harshpandey9984</a></div>
+                        <div class="detail"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/harsh-pandey-aa783925a/" target="_blank">linkedin.com/in/harsh-pandey-aa783925a</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">                <div class="skill-category" data-aos="fade-right" data-aos-duration="1200">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">Front-End Development</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Web3 & Blockchain Technology</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Solana Ecosystem</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C Language</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Web Application Development</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="skill-category" data-aos="fade-left" data-aos-duration="1200">
+                    <h3>Professional Skills & Hobbies</h3>
+                    <div class="skill-grid">
+                        <div class="skill-box">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <h4>Problem-Solving</h4>
+                            <p>Strong analytical and critical thinking abilities</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-users"></i>
+                            <h4>Collaboration</h4>
+                            <p>Effective team player with excellent communication skills</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-sync-alt"></i>
+                            <h4>Adaptability</h4>
+                            <p>Quick learner and eager to embrace new technologies</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-gamepad"></i>
+                            <h4>Online Gaming</h4>
+                            <p>Passionate about strategic online games</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-code"></i>
+                            <h4>Learning</h4>
+                            <p>Enthusiastic about learning new programming languages</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-headphones"></i>
+                            <h4>Music</h4>
+                            <p>Enjoy listening to music during coding sessions</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-microchip"></i>
+                            <h4>New Technologies</h4>
+                            <p>Always excited to explore emerging technologies</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-network-wired"></i>
+                            <h4>Networking</h4>
+                            <p>Enjoy connecting with people in the tech community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <!-- Project Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="react">React</button>
+            </div>
+            
+            <div class="projects-flip-grid">
+                <!-- Bookwarm - Flip Card -->
+                <div class="flip-card-container" data-category="blockchain web3 frontend" data-aos="fade-up">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJvb2tzJTIwdGVjaG5vbG9neXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Bookwarm">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>Bookwarm</h3>
+                                <p>A blockchain-based platform for book sharing and digital library management leveraging Web3 technology.</p>
+                                <div class="flip-card-tech">
+                                    <span>Blockchain</span>
+                                    <span>Web3</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Bookwarm</h3>
+                            <div class="flip-card-back-content">
+                                <p>A decentralized book exchange platform where users can lend, borrow, and sell books securely using blockchain technology.</p>
+                                <ul>
+                                    <li>Smart contract implementation for secure transactions</li>
+                                    <li>Digital library management system</li>
+                                    <li>User authentication using Web3 wallets</li>
+                                    <li>Real-time book availability tracking</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/Bookwarm" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="view-project" data-project="bookwarm">
+                                    <i class="fas fa-eye"></i> Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- My Portfolio - Flip Card -->
+                <div class="flip-card-container" data-category="web frontend" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Portfolio Website">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>My Portfolio</h3>
+                                <p>My professional portfolio website showcasing my skills, projects, and experience.</p>
+                                <div class="flip-card-tech">
+                                    <span>HTML/CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>TypeScript</span>
+                                    <span>Responsive</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>My Portfolio</h3>
+                            <div class="flip-card-back-content">
+                                <p>A responsive portfolio website with modern design and interactive elements to showcase my professional work.</p>
+                                <ul>
+                                    <li>Responsive design for all devices</li>
+                                    <li>Interactive UI elements and animations</li>
+                                    <li>Dark/light theme toggle</li>
+                                    <li>Project showcase with filtering</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/portfolio" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://harshpandey9984.github.io/portfolio/" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- My-React-App - Flip Card -->
+                <div class="flip-card-container" data-category="web react frontend" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhY3QlMjBqc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="My React App">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>My React App</h3>
+                                <p>A modern React application demonstrating advanced features and best practices.</p>
+                                <div class="flip-card-tech">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>CSS</span>
+                                    <span>API Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>My React App</h3>
+                            <div class="flip-card-back-content">
+                                <p>This project demonstrates various React concepts including hooks, context API, and responsive design patterns.</p>
+                                <ul>
+                                    <li>State management with Context API and Hooks</li>
+                                    <li>API integration using Fetch/Axios</li>
+                                    <li>Modern UI components with CSS-in-JS</li>
+                                    <li>Responsive design implementation</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/My-React-App" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Smart Loan - Flip Card -->
+                <div class="flip-card-container" data-category="web blockchain" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bG9hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Smart Loan">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>Smart Loan</h3>
+                                <p>A platform to provide microloans to customers using smart contracts and blockchain technology.</p>
+                                <div class="flip-card-tech">
+                                    <span>Blockchain</span>
+                                    <span>Smart Contracts</span>
+                                    <span>DeFi</span>
+                                    <span>Web3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Smart Loan</h3>
+                            <div class="flip-card-back-content">
+                                <p>A decentralized finance (DeFi) platform that allows users to obtain microloans without traditional banking requirements.</p>
+                                <ul>
+                                    <li>Smart contract-based loan processing</li>
+                                    <li>Automated credit assessment</li>
+                                    <li>Transparent loan terms on blockchain</li>
+                                    <li>Peer-to-peer lending functionality</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/Smart-Loan" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paw-some City - Flip Card -->
+                <div class="flip-card-container" data-category="web frontend" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nJTIwY2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Paw-some City">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>Paw-some City</h3>
+                                <p>A platform to create pet-friendly communities where every tail wags with joy.</p>
+                                <div class="flip-card-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Paw-some City</h3>
+                            <div class="flip-card-back-content">
+                                <p>A community-based website connecting pet owners, showcasing pet-friendly locations, and promoting pet welfare.</p>
+                                <ul>
+                                    <li>Interactive map of pet-friendly locations</li>
+                                    <li>Community forum for pet owners</li>
+                                    <li>Resources for pet adoption and care</li>
+                                    <li>Event calendar for pet-related activities</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/Paw-some-City" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Digital-Tools-help-Chatbot - Flip Card -->
+                <div class="flip-card-container" data-category="web python" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1596443686812-2f45229eebc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoYXRib3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Digital Tools Help Chatbot">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>Digital Tools Helper</h3>
+                                <p>A chatbot that helps users learn how to use digital tools like WhatsApp, Paytm & Google Maps.</p>
+                                <div class="flip-card-tech">
+                                    <span>Python</span>
+                                    <span>NLP</span>
+                                    <span>Chatbot</span>
+                                    <span>AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Digital Tools Helper</h3>
+                            <div class="flip-card-back-content">
+                                <p>An AI-powered chatbot designed to help users learn essential digital tools through FAQs and step-by-step tutorials.</p>
+                                <ul>
+                                    <li>Natural Language Processing for user queries</li>
+                                    <li>Step-by-step guided tutorials</li>
+                                    <li>FAQ system with common issues</li>
+                                    <li>Support for multiple digital platforms</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/Digital-Tools-help-Chatbot" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chatbot - Flip Card -->
+                <div class="flip-card-container" data-category="python ai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YWklMjBib3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Chatbot">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>AI Chatbot</h3>
+                                <p>A Deep-Learning multi-purpose chatbot made using Python3.</p>
+                                <div class="flip-card-tech">
+                                    <span>Python</span>
+                                    <span>Deep Learning</span>
+                                    <span>NLP</span>
+                                    <span>AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>AI Chatbot</h3>
+                            <div class="flip-card-back-content">
+                                <p>A versatile chatbot utilizing deep learning to understand and respond to user queries across multiple domains.</p>
+                                <ul>
+                                    <li>Neural network-based conversational model</li>
+                                    <li>Context-aware responses</li>
+                                    <li>Integration with external APIs</li>
+                                    <li>Custom training on specific knowledge domains</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/Chatbot" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Textify - Flip Card -->
+                <div class="flip-card-container" data-category="web frontend" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1591125665138-eb656c51de08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXVkaW8lMjB0cmFuc2NyaXB0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Textify">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>Textify</h3>
+                                <p>Seamlessly transcribing the world, one spoken word at a time, in any language you desire.</p>
+                                <div class="flip-card-tech">
+                                    <span>TypeScript</span>
+                                    <span>Speech Recognition</span>
+                                    <span>Translation API</span>
+                                    <span>UI/UX</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Textify</h3>
+                            <div class="flip-card-back-content">
+                                <p>A powerful transcription tool that converts spoken words into text with support for multiple languages.</p>
+                                <ul>
+                                    <li>Real-time speech-to-text conversion</li>
+                                    <li>Support for multiple languages</li>
+                                    <li>Export capability in various formats</li>
+                                    <li>User-friendly interface for easy operation</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/textify" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Polygon Smart Contract - Flip Card -->
+                <div class="flip-card-container" data-category="blockchain web3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flip-card flip-card-reveal">
+                        <div class="flip-card-front">
+                            <div class="flip-card-image">
+                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxvY2tjaGFpbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Polygon Smart Contract">
+                            </div>
+                            <div class="flip-card-content">
+                                <h3>Polygon Smart Contract</h3>
+                                <p>A guide for coding and deploying a basic Polygon (MATIC) smart contract.</p>
+                                <div class="flip-card-tech">
+                                    <span>Blockchain</span>
+                                    <span>Polygon</span>
+                                    <span>Solidity</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Polygon Smart Contract</h3>
+                            <div class="flip-card-back-content">
+                                <p>A comprehensive tutorial project demonstrating how to develop and deploy smart contracts on the Polygon network.</p>
+                                <ul>
+                                    <li>Smart contract development in Solidity</li>
+                                    <li>Deployment to Polygon testnet and mainnet</li>
+                                    <li>Integration with web applications</li>
+                                    <li>Gas optimization techniques</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-links">
+                                <a href="https://github.com/Harshpandey9984/polygon-smart-contract-tutorial" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <h3>Location</h3>
+                            <p>Bhopal, M.P, India</p>
+                        </div>
+                    </div>                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>9199668058</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:hp7556513@gmail.com">hp7556513@gmail.com</a></p>
+                        </div>
+                    </div>                    <div class="contact-item">
+                        <div class="icon"><i class="fab fa-github"></i></div>
+                        <div class="text">
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/Harshpandey9984" target="_blank">github.com/Harshpandey9984</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fab fa-x-twitter"></i></div>
+                        <div class="text">
+                            <h3>X (Twitter)</h3>
+                            <p><a href="https://x.com/HarshPandey9984" target="_blank">x.com/HarshPandey9984</a></p>
+                        </div>
+                    </div>
+                </div><div class="contact-form" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Harsh Pandey. All rights reserved.</p>                <div class="social-links">
+                    <a href="https://github.com/Harshpandey9984" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harsh-pandey-aa783925a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/HarshPandey9984" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Project Detail Modals -->
+    <div class="modal-container">
+        <!-- Bookwarm Project Modal -->
+        <div class="project-modal" id="modal-bookwarm">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-header">
+                    <h2>Bookwarm</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="https://via.placeholder.com/800x450" alt="Bookwarm Project">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h3>Project Overview</h3>
+                            <p>Bookwarm is a blockchain-based platform for book sharing and digital library management leveraging Web3 technology and the Solana ecosystem. The platform allows users to lend, borrow, and sell books in a decentralized manner.</p>
+                            
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Decentralized book exchange using Solana blockchain</li>
+                                <li>Smart contracts for secure transactions</li>
+                                <li>Digital library management system</li>
+                                <li>User authentication using Web3 wallets</li>
+                                <li>Real-time book availability tracking</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Solana</span>
+                                <span>Rust</span>
+                                <span>React</span>
+                                <span>Web3.js</span>
+                                <span>JavaScript</span>
+                            </div>
+                            
+                            <div class="modal-links">
+                                <a href="https://github.com/Harshpandey9984/Bookwarm" target="_blank" class="btn primary-btn">
+                                    <i class="fab fa-github"></i> GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Web Application Project Modal -->
+        <div class="project-modal" id="modal-webapp">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-header">
+                    <h2>Web Application Project</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="https://via.placeholder.com/800x450" alt="Web Application Project">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h3>Project Overview</h3>
+                            <p>A modern web application showcasing front-end development skills and responsive design principles. This project demonstrates modern UI/UX design techniques and interactive elements.</p>
+                            
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Responsive design for all device sizes</li>
+                                <li>Modern UI with smooth animations</li>
+                                <li>Interactive form elements with validation</li>
+                                <li>Dynamic content loading</li>
+                                <li>Optimized performance</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>GSAP</span>
+                                <span>Responsive Design</span>
+                            </div>
+                            
+                            <div class="modal-links">
+                                <a href="https://harshpandey9984.github.io/portfolio/" target="_blank" class="btn primary-btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Solana DeFi Platform Modal -->
+        <div class="project-modal" id="modal-solana-defi">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-header">
+                    <h2>Solana DeFi Platform</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="https://via.placeholder.com/800x450" alt="Solana DeFi Platform">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h3>Project Overview</h3>
+                            <p>A decentralized finance platform built on the Solana blockchain, offering fast transactions and low fees. This platform enables users to participate in various DeFi activities like staking, swapping, and yield farming.</p>
+                            
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Token swapping with minimal fees</li>
+                                <li>Liquidity pool management</li>
+                                <li>Yield farming opportunities</li>
+                                <li>Real-time price charts and analytics</li>
+                                <li>Wallet integration for multiple providers</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Solana</span>
+                                <span>Rust</span>
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Anchor Framework</span>
+                            </div>
+                            
+                            <div class="modal-links">
+                                <a href="#" target="_blank" class="btn primary-btn">
+                                    <i class="fab fa-github"></i> GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Website Modal -->
+        <div class="project-modal" id="modal-portfolio">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-header">
+                    <h2>Portfolio Website</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="https://via.placeholder.com/800x450" alt="Portfolio Website">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h3>Project Overview</h3>
+                            <p>My personal portfolio website featuring modern design, smooth animations, and responsive layout. Designed to showcase my skills, projects, and professional experience in an engaging way.</p>
+                            
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Interactive particle background using THREE.js</li>
+                                <li>Smooth scrolling animations with GSAP</li>
+                                <li>Dark/light theme toggle with preference saving</li>
+                                <li>Custom cursor effect with hover interactions</li>
+                                <li>Fully responsive design for all devices</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>GSAP</span>
+                                <span>THREE.js</span>
+                                <span>AOS Library</span>
+                            </div>
+                            
+                            <div class="modal-links">
+                                <a href="https://github.com/Harshpandey9984/portfolio" target="_blank" class="btn primary-btn">
+                                    <i class="fab fa-github"></i> GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
