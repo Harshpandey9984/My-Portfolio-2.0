@@ -1,0 +1,593 @@
+/* Comprehensive responsive styles for Portfolio 4.0 */
+
+/* Base responsive settings */
+html {
+    font-size: 16px; /* Base font size */
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    
+    /* Project grid for large screens */
+    .projects-flip-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    /* Hero section adjustments */
+    .hero-3d-name h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Project grid for medium-large screens */
+    .projects-flip-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    
+    /* Section padding adjustment */
+    section {
+        padding: 80px 0;
+    }
+    
+    /* Hero section adjustments */
+    .hero-3d-name h1 {
+        font-size: 3rem;
+    }
+    
+    .typed-container .typed-text {
+        font-size: 1.5rem;
+    }
+    
+    /* About section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Skills grid */
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Project grid for tablets */
+    .projects-flip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .contact-form {
+        order: 1;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    /* Section padding adjustment */
+    section {
+        padding: 60px 0;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 60px;
+    }
+    
+    .hero-3d-name h1 {
+        font-size: 2.5rem;
+    }
+    
+    .typed-container .typed-text {
+        font-size: 1.3rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Project grid for small devices */
+    .projects-flip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* Filter buttons */
+    .filter-container {
+        overflow-x: auto;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+    
+    .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-links {
+        margin-top: 20px;
+    }
+}
+
+/* Extra Small Devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Section padding adjustment */
+    section {
+        padding: 50px 0;
+    }
+    
+    /* Section title */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 90px 0 50px;
+    }
+    
+    .hero-3d-name h1 {
+        font-size: 2rem;
+    }
+    
+    .typed-container .typed-text {
+        font-size: 1.2rem;
+    }
+    
+    /* Hero buttons */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+    
+    /* About section */
+    .about-img {
+        max-width: 250px;
+        margin: 0 auto 30px;
+    }
+    
+    .about-text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .about-details .detail {
+        margin: 5px 0;
+    }
+    
+    /* Skills section */
+    .skill-category h3 {
+        font-size: 1.3rem;
+    }
+    
+    .skill-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .skill-box {
+        padding: 15px;
+    }
+    
+    /* Project grid for mobile */
+    .projects-flip-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .flip-card-container {
+        height: auto;
+        min-height: 350px;
+    }
+    
+    /* Contact form */
+    .contact-form form {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    input, textarea {
+        padding: 12px;
+    }
+    
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Enhanced contact section responsiveness */
+    .contact-info .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    
+    .contact-info .icon {
+        margin: 0 auto 10px;
+    }
+    
+    .contact-info .text {
+        margin-left: 0;
+    }
+    
+    .contact-form form {
+        padding: 20px 15px;
+    }
+    
+    /* Improve form for mobile */
+    input, textarea, .submit-btn {
+        font-size: 16px !important; /* Prevents iOS zoom */
+        padding: 15px;
+    }
+    
+    .submit-btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    /* Make contact details more readable */
+    .contact-item a {
+        display: inline-block;
+        padding: 5px 0;
+    }
+    
+    /* Social links in footer */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-links a {
+        font-size: 1.2rem;
+        margin: 0 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Specific adjustments for very small devices */
+@media (max-width: 375px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .hero-3d-name h1 {
+        font-size: 1.8rem;
+    }
+    
+    .typed-container .typed-text {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 60px 0 30px;
+    }
+    
+    .hero-3d-name h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content {
+        gap: 10px;
+    }
+    
+    .nav-links {
+        padding-top: 20px;
+    }
+    
+    .nav-links li {
+        margin: 8px 0;
+    }
+}
+
+/* Adjustments for high pixel density devices */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .img-border img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero, footer, .back-to-top, .nav-links, .burger {
+        display: none !important;
+    }
+    
+    * {
+        cursor: default !important;
+        color: black !important;
+    }
+    
+    .cursor-dot, .cursor-outline {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    .about, .skills, .projects, .contact {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility - focus styles */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        height: -webkit-fill-available;
+    }
+}
+
+/* Mobile navigation enhancements */
+@media (max-width: 768px) {
+    /* Prevent body scrolling when mobile nav is open */
+    body.nav-open {
+        overflow: hidden;
+    }
+    
+    /* Mobile nav animation */
+    .nav-links {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+    }
+    
+    /* Animation for nav items entrance */
+    @keyframes navItemFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* Improved burger button styles */
+    .burger {
+        cursor: pointer;
+        z-index: 101;
+        padding: 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40px;
+        height: 40px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Add better focus state for burger button */
+    .burger:focus {
+        box-shadow: 0 0 0 2px var(--primary);
+        border-radius: 4px;
+    }
+    
+    /* Filter buttons scroll hint */
+    .filter-scroll-hint {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to left, rgba(18, 18, 18, 0.7), transparent);
+        border-radius: 50%;
+        color: var(--light);
+        pointer-events: none;
+        animation: pulse-hint 1.5s infinite;
+        z-index: 10;
+        opacity: 0.7;
+    }
+    
+    @keyframes pulse-hint {
+        0% {
+            opacity: 0.7;
+            transform: translateY(-50%) scale(1);
+        }
+        50% {
+            opacity: 0.9;
+            transform: translateY(-50%) scale(1.1);
+        }
+        100% {
+            opacity: 0.7;
+            transform: translateY(-50%) scale(1);
+        }
+    }
+    
+    .filter-scroll-hint.fade-out {
+        animation: fade-out 0.5s forwards;
+    }
+    
+    @keyframes fade-out {
+        to {
+            opacity: 0;
+        }
+    }
+    
+    /* Mobile flip card back button */
+    .flip-back-btn {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        z-index: 5;
+        backdrop-filter: blur(3px);
+    }
+    
+    .flip-back-btn:hover {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Use a CSS variable for vh on mobile to fix the 100vh issue */
+.hero {
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
+}

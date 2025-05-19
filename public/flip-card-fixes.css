@@ -1,0 +1,69 @@
+/**
+ * Additional emergency fixes for flip cards
+ * This file contains critical overrides to ensure proper functioning
+ */
+
+/* Fix for GitHub links not appearing */
+.flip-card-back {
+    z-index: 100 !important;
+}
+
+/* Ensure links are always clickable */
+.flip-card-links {
+    z-index: 200 !important;
+    position: relative !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 20px !important;
+}
+
+.flip-card-links a {
+    position: relative !important;
+    z-index: 500 !important;
+    pointer-events: auto !important;
+}
+
+/* Force proper backface visibility */
+.flip-card-front, 
+.flip-card-back {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+}
+
+/* Ensure flip works in all browsers */
+.flip-card {
+    -webkit-transform-style: preserve-3d !important;
+    transform-style: preserve-3d !important;
+}
+
+/* On hover, force the transform for desktop */
+@media (min-width: 769px) {
+    .flip-card-container:hover .flip-card {
+        -webkit-transform: rotateY(180deg) !important;
+        transform: rotateY(180deg) !important;
+    }
+}
+
+/* On manual flip, force the transform for mobile/touch */
+.flip-card.manual-flip {
+    -webkit-transform: rotateY(180deg) !important;
+    transform: rotateY(180deg) !important;
+}
+
+/* Force visibility of flip button */
+.flip-trigger {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 20 !important;
+    display: block !important;
+    opacity: 0.7 !important;
+}
+
+/* Fix for light theme specifics */
+html.light-theme .flip-card-links a {
+    color: rgba(0, 0, 0, 0.8) !important;
+    background: rgba(138, 43, 226, 0.3) !important;
+    border: 1px solid rgba(138, 43, 226, 0.4) !important;
+}

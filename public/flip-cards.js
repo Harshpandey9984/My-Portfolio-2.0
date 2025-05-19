@@ -6,33 +6,51 @@ document.addEventListener('DOMContentLoaded', function() {
     window.flipCardsInitialized = true;
     
     // Initialize flip cards with animation
-    const flipCards = document.querySelectorAll('.flip-card-reveal');
+    const flipCards = document.querySelectorAll('.flip-card');
     const flipCardContainers = document.querySelectorAll('.flip-card-container');
     
-    // Initial animation for flip cards
+    // Force add the show class to all flip cards to ensure they're visible
+    flipCards.forEach((card, index) => {
+        // Remove and re-add the reveal class to trigger animation
+        if (card.classList.contains('flip-card-reveal')) {
+            card.classList.add('show');
+        }
+    });
+    
+    // Make sure all flip cards are visible
     setTimeout(() => {
-        flipCards.forEach((card, index) => {
+        document.querySelectorAll('.flip-card-reveal').forEach((card, index) => {
             setTimeout(() => {
                 card.classList.add('show');
             }, 100 * index);
         });
     }, 500);
-    
-    // Add touch/click functionality for mobile devices
+      // Add touch/click functionality for mobile devices
     flipCardContainers.forEach(container => {
         const card = container.querySelector('.flip-card');
         
-        // Detect touch devices
+        // Detect touch devices - always enable click functionality for better UX
         const isTouchDevice = 'ontouchstart' in window || 
                               navigator.maxTouchPoints > 0 || 
                               navigator.msMaxTouchPoints > 0;
         
-        if (isTouchDevice) {
-            container.addEventListener('click', function(e) {
+        // Add click listener for all devices for better consistency
+        container.addEventListener('click', function(e) {
+            // Only toggle the flip if we're not clicking on a link
+            if (!e.target.closest('a')) {
                 e.preventDefault();
                 card.classList.toggle('manual-flip');
+            }
+        });
+        
+        // Ensure links are clickable on touch devices
+        const links = container.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Stop propagation to prevent the card from flipping when clicking links
+                e.stopPropagation();
             });
-        }
+        });
     });
     
     // Update filter buttons to work with flip cards

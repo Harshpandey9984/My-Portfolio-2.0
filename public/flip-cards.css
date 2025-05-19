@@ -63,6 +63,16 @@
     background-image: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(20, 20, 20, 1));
 }
 
+/* Light theme card backgrounds for better contrast */
+html.light-theme .flip-card-front {
+    background-color: #f5f5f7;
+}
+
+html.light-theme .flip-card-back {
+    background-color: #f5f5f7;
+    background-image: linear-gradient(145deg, rgba(245, 245, 247, 0.9), rgba(240, 240, 242, 1));
+}
+
 /* Front card styling */
 .flip-card-image {
     width: 100%;
@@ -138,6 +148,12 @@
     opacity: 0.9;
 }
 
+/* Light theme text enhancement for better visibility */
+html.light-theme .flip-card-content p {
+    color: var(--light-text, #333);
+    opacity: 0.9;
+}
+
 .flip-card-tech {
     display: flex;
     flex-wrap: wrap;
@@ -151,6 +167,13 @@
     padding: 4px 10px;
     border-radius: 15px;
     font-size: 0.8rem;
+}
+
+/* Light theme tech tags enhancement */
+html.light-theme .flip-card-tech span {
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(138, 43, 226, 0.2);
 }
 
 /* Back card styling */
@@ -175,6 +198,13 @@
     margin-bottom: 8px;
     font-size: 0.9rem;
     color: var(--light);
+}
+
+/* Light theme enhancement for back card content */
+html.light-theme .flip-card-back-content,
+html.light-theme .flip-card-back ul li {
+    color: var(--light-text, #333);
+    opacity: 0.9;
 }
 
 .flip-card-links {
@@ -266,6 +296,13 @@ html.light-theme .flip-card-content p,
 html.light-theme .flip-card-back-content,
 html.light-theme .flip-card-back ul li {
     color: var(--light-text);
+    opacity: 0.9;
+}
+
+html.light-theme .flip-card-tech span {
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(138, 43, 226, 0.2);
 }
 
 /* Responsive adjustments */
@@ -317,10 +354,11 @@ html.light-theme .flip-card-back ul li {
 @media screen and (max-width: 480px) {
     .projects-flip-grid {
         grid-template-columns: 1fr;
+        padding: 0 10px;
     }
     
     .flip-card-container {
-        max-width: 320px;
+        max-width: 100%;
         margin: 0 auto;
     }
     
@@ -329,8 +367,31 @@ html.light-theme .flip-card-back ul li {
         transform: none;
     }
     
+    .flip-card-container .flip-card.manual-flip,
     .flip-card-container .flip-card.flipped {
         transform: rotateY(180deg);
+    }
+    
+    /* Improved mobile styling */
+    .flip-card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .flip-card-content p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .flip-card-tech span {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        margin: 2px;
+    }
+    
+    .flip-card-links a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 }
 
