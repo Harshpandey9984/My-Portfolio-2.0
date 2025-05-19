@@ -1,0 +1,145 @@
+/* Light Theme Styles */
+html.light-theme body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+html.light-theme .section-title {
+    color: var(--light-text);
+}
+
+html.light-theme #navbar {
+    background-color: rgba(248, 249, 250, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+html.light-theme #navbar.scrolled {
+    background-color: rgba(248, 249, 250, 0.98);
+}
+
+html.light-theme .burger div {
+    background-color: var(--light-text);
+}
+
+html.light-theme .skill-category,
+html.light-theme .project-card,
+html.light-theme .timeline-content,
+html.light-theme .contact-form {
+    background: var(--light-card);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--light-border);
+}
+
+html.light-theme .detail a {
+    color: var(--light-text);
+}
+
+html.light-theme .detail a:hover {
+    color: var(--primary);
+}
+
+html.light-theme .skill-box {
+    background: var(--light-card);
+    border: 1px solid var(--light-border);
+}
+
+html.light-theme .hero {
+    background: linear-gradient(rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.9)), 
+                url('https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-1.2.1&auto=format&fit=crop&w=2952&q=80') center/cover no-repeat;
+}
+
+html.light-theme footer {
+    background: var(--light-bg);
+    border-top: 1px solid var(--light-border);
+}
+
+html.light-theme .social-links a {
+    background: var(--light-card);
+}
+
+html.light-theme .preloader {
+    background: var(--light-bg);
+}
+
+html.light-theme .about {
+    background-color: #f0f0f0;
+}
+
+html.light-theme .education {
+    background-color: #f8f8f8;
+}
+
+html.light-theme .skills {
+    background-color: #f0f0f0;
+}
+
+html.light-theme .projects {
+    background-color: #f8f8f8;
+}
+
+html.light-theme .contact {
+    background-color: #f0f0f0;
+}
+
+html.light-theme .skill-bar {
+    background: #e0e0e0;
+}
+
+html.light-theme .nav-links a {
+    color: var(--light-text);
+}
+
+html.light-theme .nav-links a::after {
+    background: var(--primary);
+}
+
+html.light-theme .project-tech span {
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--primary);
+}
+
+html.light-theme .form-group input,
+html.light-theme .form-group textarea {
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    color: var(--light-text);
+}
+
+html.light-theme .form-group input:focus,
+html.light-theme .form-group textarea:focus {
+    border-color: var(--primary);
+    background: #ffffff;
+}
+
+/* Light theme for filter buttons */
+html.light-theme .filter-btn {
+    background: #ffffff;
+    color: var(--light-text);
+    border: 1px solid #e0e0e0;
+}
+
+html.light-theme .filter-btn:hover {
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+html.light-theme .filter-btn.active {
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* Light theme for modals */
+html.light-theme .modal-content {
+    background: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+html.light-theme .modal-header {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+html.light-theme .modal-close {
+    color: #333;
+}

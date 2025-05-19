@@ -1,0 +1,29 @@
+{
+  "name": "harsh-pandey-portfolio-4.0",
+  "version": "4.0.0",
+  "description": "Enhanced personal portfolio website with flip cards for Harsh Pandey",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server",
+    "dev": "npx live-server",
+    "build": "echo \"No build process required\""
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "blockchain",
+    "web3",
+    "flip-cards",
+    "animations",
+    "gsap"
+  ],
+  "author": "Harsh Pandey",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

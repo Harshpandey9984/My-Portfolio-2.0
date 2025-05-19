@@ -1,0 +1,147 @@
+/* 3D Name Effect for HARSH PANDEY */
+.hero-3d-name {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    z-index: 10;
+    user-select: none;
+}
+
+.hero-3d-name h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: transparent;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-shadow: 
+        0 1px 0 rgba(255,255,255,0.2),
+        0 2px 0 rgba(255,255,255,0.2),
+        0 3px 0 rgba(255,255,255,0.1),
+        0 12px 10px rgba(0,0,0,0.2);
+    transform: translateZ(0);
+}
+
+.hero-3d-name .text-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    color: transparent;
+    text-shadow: 0 0 20px var(--primary);
+    animation: text-flicker 5s infinite alternate;
+}
+
+.hero-3d-name::before,
+.hero-3d-name::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: -1;
+}
+
+.hero-3d-name::before {
+    color: rgba(138, 43, 226, 0.1);
+    transform: translateZ(-10px);
+}
+
+.hero-3d-name::after {
+    color: rgba(147, 112, 219, 0.1);
+    transform: translateZ(-20px);
+}
+
+@keyframes text-flicker {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.3;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    80% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.1;
+    }
+}
+
+/* Hover effect */
+.hero-3d-name:hover h1 {
+    animation: name-bounce 0.5s ease-in-out;
+}
+
+@keyframes name-bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+/* Light theme adjustments */
+html.light-theme .hero-3d-name h1 {
+    text-shadow: 
+        0 1px 0 rgba(0,0,0,0.1),
+        0 2px 0 rgba(0,0,0,0.1),
+        0 3px 0 rgba(0,0,0,0.05),
+        0 8px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero-3d-name h1 {
+        font-size: 3rem;
+    }
+    .hero-3d-name::before,
+    .hero-3d-name::after {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-3d-name h1 {
+        font-size: 2.5rem;
+    }
+    .hero-3d-name::before,
+    .hero-3d-name::after {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,98 @@
+/* Mobile touch optimizations for flip cards */
+
+/* Indicator for touch devices */
+.touch-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.touch-indicator i {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.touch-indicator.touched {
+    opacity: 0;
+    animation: none;
+    pointer-events: none;
+}
+
+/* Hide touch indicator on desktop */
+@media (hover: hover) {
+    .touch-indicator {
+        display: none;
+    }
+}
+
+/* Specific styles for touch devices */
+.touch-device .flip-card-container:hover .flip-card {
+    transform: none; /* Disable hover effect on touch devices */
+}
+
+.touch-device .flip-card-container .flip-card.manual-flip {
+    transform: rotateY(180deg); /* Use manual flip class instead */
+}
+
+/* Allow horizontal scrolling on mobile */
+@media screen and (max-width: 576px) {
+    .projects-flip-grid {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+}
+
+/* Swipe hint animation */
+@media screen and (max-width: 576px) {
+    .projects-flip-grid::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 50px;
+        width: 20px;
+        background: linear-gradient(to left, rgba(138, 43, 226, 0.2), transparent);
+        border-radius: 10px 0 0 10px;
+        animation: swipeHint 3s infinite alternate;
+        pointer-events: none;
+        opacity: 0.7;
+    }
+
+    @keyframes swipeHint {
+        0% {
+            transform: translateX(0) translateY(-50%);
+        }
+        100% {
+            transform: translateX(-20px) translateY(-50%);
+        }
+    }
+}
+
+/* Pulse animation for the touch indicator */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+        transform: scale(1.1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        transform: scale(1);
+    }
+}

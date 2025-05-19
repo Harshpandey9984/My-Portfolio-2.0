@@ -1,0 +1,22 @@
+{
+  "name": "harsh-pandey-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Harsh Pandey",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server",
+    "dev": "npx live-server",
+    "build": "echo \"No build process required\""
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "blockchain",
+    "web3"
+  ],
+  "author": "Harsh Pandey",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
