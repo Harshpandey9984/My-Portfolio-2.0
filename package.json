@@ -5,7 +5,7 @@
   "main": "index.html",  "scripts": {
     "start": "npx live-server",
     "dev": "npx live-server",
-    "build": "mkdir -p public && cp -r *.html *.css *.js assets public/"
+    "build": "bash ./build.sh"
   },
   "keywords": [
     "portfolio",
