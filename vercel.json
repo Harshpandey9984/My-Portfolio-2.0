@@ -1,9 +1,15 @@
-{  "version": 2,
+{  
+  "version": 2,
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
+  "github": {
+    "enabled": true,
+    "silent": true,
+    "autoAlias": true
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
@@ -13,7 +19,19 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=86400"
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        },
+        {
+          "key": "X-Deployment-Version",
+          "value": "1.2.1-20250520"
         }
       ]
     }
