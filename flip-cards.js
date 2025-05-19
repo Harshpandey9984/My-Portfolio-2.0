@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.toggle('manual-flip');
             });
         }
-      // Update filter buttons to work with flip cards
+    });
+    
+    // Update filter buttons to work with flip cards
     // First, check if script-new.js already handles this
     if (!window.filterButtonsInitialized) {
         // Mark as initialized to avoid duplication
@@ -106,7 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-      // Add enhanced cursor interaction for flip cards
+    
+    // Add enhanced cursor interaction for flip cards
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
     

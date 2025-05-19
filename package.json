@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx live-server",
     "dev": "npx live-server",
-    "build": "echo \"No build process required\""
+    "build": "cp -r *.html *.css *.js assets public/ || xcopy /E /I /Y *.html *.css *.js assets public\\"
   },
   "keywords": [
     "portfolio",
