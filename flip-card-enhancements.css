@@ -1,0 +1,81 @@
+/**
+ * Enhanced styling for flip card links and animations
+ * This file improves the visibility of GitHub links and fixes flip animations
+ */
+
+/* Enhance visibility of links in flip cards */
+.flip-card-links a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 20px !important;
+    margin: 10px 5px !important;
+    border-radius: 50px !important;
+    background: rgba(138, 43, 226, 0.2) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(138, 43, 226, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    z-index: 10 !important;
+}
+
+/* Light theme specific styling for links */
+html.light-theme .flip-card-links a {
+    background: rgba(138, 43, 226, 0.3) !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid rgba(138, 43, 226, 0.4) !important;
+}
+
+.flip-card-links a i {
+    font-size: 1rem !important;
+    margin-right: 5px !important;
+}
+
+.flip-card-links a:hover {
+    transform: translateY(-3px) !important;
+    background: rgba(138, 43, 226, 0.8) !important;
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3) !important;
+    color: white !important;
+}
+
+html.light-theme .flip-card-links a:hover {
+    background: rgba(138, 43, 226, 0.7) !important;
+    color: white !important;
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3) !important;
+}
+
+/* Force flip cards to show when JavaScript might be failing */
+.flip-card-reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Fix for flip animation not working */
+@media (min-width: 769px) {
+    .flip-card-container:hover .flip-card {
+        transform: rotateY(180deg) !important;
+    }
+}
+
+/* Manual flip for mobile and touch devices */
+@media (max-width: 768px) {
+    .flip-card-container .flip-card.manual-flip {
+        transform: rotateY(180deg) !important;
+    }
+    
+    /* Make links extra touch-friendly on mobile */
+    .flip-card-links a {
+        padding: 12px 24px !important;
+        margin: 15px 5px !important;
+        font-size: 1rem !important;
+        width: auto !important;
+        min-width: 140px !important;
+        justify-content: center !important;
+    }
+}

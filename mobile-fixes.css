@@ -1,0 +1,90 @@
+/**
+ * Mobile-specific fixes and enhancements for the portfolio website
+ * These styles help address common mobile browser issues
+ */
+
+/* Fix for 100vh on mobile browsers (especially iOS Safari) */
+.hero {
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Better touch interactions */
+.touch-device {
+    /* Increase touch targets for better accessibility */
+    .nav-links a,
+    .hero-buttons .btn,
+    .filter-btn,
+    button,
+    .social-links a {
+        padding: 12px 20px;
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    /* Disable custom cursor on touch devices */
+    * {
+        cursor: auto !important;
+    }
+    
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+}
+
+/* Prevent content overflow */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Improve scrolling */
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Improve form elements on mobile */
+@media (max-width: 576px) {
+    input,
+    textarea,
+    select,
+    button {
+        font-size: 16px !important; /* Prevents iOS zoom on focus */
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+/* Improved scroll behavior */
+html {
+    scroll-padding-top: 80px; /* Accounts for fixed header */
+}
+
+/* Fix for notch on newer iPhones */
+@supports (padding: max(0px)) {
+    .navbar {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+    
+    .hero {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+}

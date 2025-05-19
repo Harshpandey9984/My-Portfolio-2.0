@@ -12,6 +12,13 @@
     --light-text: #333333;
     --light-card: #ffffff;
     --light-border: #e0e0e0;
+    
+    /* Responsive Variables */
+    --container-xl: 1140px;
+    --container-lg: 960px;
+    --container-md: 720px;
+    --container-sm: 540px;
+    --container-xs: 100%;
 }
 
 * {
@@ -106,10 +113,11 @@ body {
 }
 
 .container {
-    width: 85%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: var(--container-xl);
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 section {

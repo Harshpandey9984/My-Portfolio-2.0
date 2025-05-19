@@ -1,0 +1,169 @@
+/**
+ * Accessibility styles for portfolio website
+ * Enhances user experience for users with disabilities
+ */
+
+/* Focus styles - make sure focused elements are clearly visible */
+:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Ensure links are recognizable */
+a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+/* Navigation accessibility */
+.nav-links a:focus,
+.social-links a:focus,
+.filter-btn:focus,
+button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Skip to content link for keyboard navigation */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 10px;
+    z-index: 9999;
+    transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Improve color contrast for better readability */
+.footer-content {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Make buttons more accessible */
+button, 
+.btn {
+    cursor: pointer;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;  /* Minimum touch target size */
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .glow-orb,
+    .particle,
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+    
+    .flip-card-container:hover .flip-card {
+        transform: none !important;
+    }
+    
+    /* Use alternative non-animated styles */
+    .hero-3d-name h1 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+    /* Add high contrast support here */
+    .flip-card,
+    .skill-box,
+    .contact-form,
+    .nav-links {
+        border: 1px solid CanvasText;
+    }
+    
+    .skill-level {
+        background: Highlight;
+    }
+}
+
+/* Form field accessibility */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.3);
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: 16px; /* Prevents zoom on focus on iOS */
+}
+
+/* Form labels - visually hidden but accessible to screen readers */
+.form-group label.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive font sizes using clamp for better readability */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+p, li {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* Keyboard accessible interactions */
+.flip-card-container {
+    position: relative;
+}
+
+.flip-card-container:focus-within .flip-card {
+    transform: rotateY(180deg);
+}
+
+/* Focus trap for modals */
+.modal-content:focus-within {
+    outline: none;
+}
