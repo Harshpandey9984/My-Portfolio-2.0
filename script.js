@@ -21,70 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Page transitions
     const pageTransition = document.querySelector('.page-transition');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navAnchorLinks = document.querySelectorAll('.nav-links a');
     
     // Handle navigation with page transition
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Only trigger for same-page navigation
-            if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                
-                // Trigger transition animation
-                gsap.to(pageTransition, {
-                    duration: 0.5,
-                    y: '0%',
-                    ease: 'power2.inOut',
-                    onComplete: () => {
-                        // Scroll to section after transition
-                        const targetElement = document.querySelector(targetId);
-                        
-                        if (targetElement) {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 70,
-                                behavior: 'instant'
-                            });
-                        }
-                        
-                        // Hide transition overlay
-                        gsap.to(pageTransition, {
-                            duration: 0.5,
-                            y: '-100%',
-                            delay: 0.3,
-                            ease: 'power2.inOut',
-                            onComplete: () => {
-                                // Reset overlay position
-                                gsap.set(pageTransition, { y: '100%' });
-                                
-                                // Re-enable scrolling
-                                document.body.style.overflow = 'auto';
-                            }
-                        });
-                    }
-                });
-                
-                // Close mobile menu if open
-                const burger = document.querySelector('.burger');
-                const nav = document.querySelector('.nav-links');
-                
-                if (nav.classList.contains('nav-active')) {
-                    nav.classList.remove('nav-active');
-                    burger.classList.remove('toggle');
-                    
-                    document.querySelectorAll('.nav-links li').forEach(link => {
-                        link.style.animation = '';
-                    });
-                }
-            }
-        });
-    });
-      // Page transitions
-    const pageTransition = document.querySelector('.page-transition');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    // Handle navigation with page transition
-    navLinks.forEach(link => {
+    navAnchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             // Only trigger for same-page navigation
             if (this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
@@ -239,14 +179,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+    const navListLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', function() {
         // Toggle nav menu
         nav.classList.toggle('nav-active');
         
         // Animate links
-        navLinks.forEach((link, index) => {
+        navListLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
             } else {
@@ -257,14 +197,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Burger animation
         burger.classList.toggle('toggle');
     });
-
+    
     // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
+    navListLinks.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('nav-active');
             burger.classList.remove('toggle');
             
-            navLinks.forEach(link => {
+            navListLinks.forEach(link => {
                 link.style.animation = '';
             });
         });
