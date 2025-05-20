@@ -1,0 +1,44 @@
+/**
+ * Resume button styling for portfolio website
+ * Enhances the appearance of the resume download button
+ */
+
+/* Resume link styling in about section */
+.resume-link {
+    color: var(--accent-color, var(--primary));
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Resume button in social links */
+.social-links a.resume-link {
+    background: rgba(138, 43, 226, 0.1);
+}
+
+.social-links a.resume-link:hover {
+    background: var(--primary);
+}
+
+/* Light theme styles */
+html.light-theme .resume-link {
+    color: var(--primary);
+}
+
+html.light-theme .social-links a.resume-link {
+    background: rgba(138, 43, 226, 0.1);
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+    .detail .resume-link {
+        padding: 5px 10px;
+        border-radius: 4px;
+        background: rgba(138, 43, 226, 0.1);
+        display: inline-block;
+    }
+}
