@@ -1,0 +1,492 @@
+/* 🌟 ADDITIONAL FUTURISTIC PORTFOLIO ENHANCEMENTS 🌟 */
+
+/* ===== ENHANCED HERO SUBTITLE ===== */
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1.5rem 0 2.5rem 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.hero-subtitle::before,
+.hero-subtitle::after {
+    content: '▸';
+    color: #00FFF0;
+    font-size: 1rem;
+    animation: pulse-arrow 2s infinite;
+}
+
+.hero-subtitle::before {
+    margin-right: 10px;
+}
+
+.hero-subtitle::after {
+    margin-left: 10px;
+    animation-delay: 1s;
+}
+
+@keyframes pulse-arrow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* ===== ENHANCED SECTION TITLES ===== */
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    background: linear-gradient(45deg, #00FFF0, #FF00FF, #00FF00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-flow 3s ease-in-out infinite;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #00FFF0, transparent);
+    border-radius: 2px;
+}
+
+/* ===== ENHANCED ABOUT SECTION ===== */
+.about {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 25%, #16213e 75%, #0f0f23 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="about-pattern" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="1" fill="%2300FFF0" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23about-pattern)"/></svg>');
+    animation: pattern-drift 25s linear infinite;
+}
+
+@keyframes pattern-drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(15px, 15px); }
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-img::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 240, 0.1), transparent);
+    border-radius: 20px;
+    z-index: -1;
+    animation: glow-rotate 4s linear infinite;
+}
+
+@keyframes glow-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.img-border {
+    border: 2px solid rgba(0, 255, 240, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.img-border:hover {
+    border-color: #00FFF0;
+    box-shadow: 0 0 30px rgba(0, 255, 240, 0.5);
+    transform: scale(1.02);
+}
+
+.about-text {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 240, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.about-text h3 {
+    color: #00FFF0;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.about-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #00FFF0, transparent);
+}
+
+/* ===== ENHANCED PROJECT SECTION ===== */
+.projects {
+    background: linear-gradient(135deg, #16213e 0%, #0f0f23 50%, #1a0033 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="project-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M 25 0 L 0 0 0 25" fill="none" stroke="%2300FFF0" stroke-width="0.2" opacity="0.15"/></pattern></defs><rect width="100%" height="100%" fill="url(%23project-grid)"/></svg>');
+    animation: grid-float 40s linear infinite;
+}
+
+@keyframes grid-float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(25px, 25px); }
+}
+
+/* ===== ENHANCED FILTER BUTTONS ===== */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 255, 240, 0.3);
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 240, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.filter-btn:hover::before {
+    left: 100%;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(45deg, #00FFF0, #0080FF);
+    color: #000;
+    border-color: #00FFF0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 255, 240, 0.4);
+}
+
+/* ===== ENHANCED PROJECT CARDS ===== */
+.flip-card-container {
+    transition: all 0.3s ease;
+}
+
+.flip-card-container:hover {
+    transform: translateY(-10px);
+}
+
+.flip-card {
+    border: 1px solid rgba(0, 255, 240, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card:hover {
+    border-color: rgba(0, 255, 240, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 255, 240, 0.2);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: relative;
+}
+
+.flip-card-front::before,
+.flip-card-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 240, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.flip-card:hover .flip-card-front::before,
+.flip-card:hover .flip-card-back::before {
+    opacity: 1;
+}
+
+.flip-card-title {
+    color: #00FFF0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.flip-card-desc {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== ENHANCED SKILL BARS ===== */
+.skill-name {
+    color: #00FFF0;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.skill-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 240, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 255, 240, 0.3);
+    transform: translateX(5px);
+}
+
+/* ===== ENHANCED NAVIGATION ===== */
+#navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 255, 240, 0.2);
+    transition: all 0.3s ease;
+}
+
+#navbar:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom-color: rgba(0, 255, 240, 0.4);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #00FFF0, #FF00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00FFF0, #FF00FF);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 240, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-links a:hover::before {
+    left: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: #00FFF0;
+    background: rgba(0, 255, 240, 0.1);
+    border: 1px solid rgba(0, 255, 240, 0.3);
+}
+
+/* ===== THEME TOGGLE ENHANCEMENT ===== */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 240, 0.3);
+    border-radius: 25px;
+    padding: 8px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 240, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover::before {
+    opacity: 1;
+}
+
+.theme-toggle:hover {
+    border-color: #00FFF0;
+    box-shadow: 0 0 15px rgba(0, 255, 240, 0.3);
+}
+
+/* ===== FOOTER ENHANCEMENT ===== */
+footer {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
+    border-top: 1px solid rgba(0, 255, 240, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footer-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%2300FFF0" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footer-pattern)"/></svg>');
+}
+
+/* ===== RESPONSIVE ENHANCEMENTS ===== */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .filter-container {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .floating-tech-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-3d-name h1 {
+        font-size: 2.5rem;
+    }
+    
+    .typed-container {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===== LOADING ANIMATION ===== */
+body.loaded .fade-up,
+body.loaded .slide-left,
+body.loaded .slide-right {
+    animation-play-state: running;
+}
+
+/* ===== SCROLL BAR STYLING ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00FFF0, #FF00FF);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00FFE0, #FF20FF);
+}
+
+/* ===== SELECTION STYLING ===== */
+::selection {
+    background: rgba(0, 255, 240, 0.3);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(0, 255, 240, 0.3);
+    color: #fff;
+}
