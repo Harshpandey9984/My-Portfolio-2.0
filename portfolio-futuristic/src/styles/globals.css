@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-dark-bg via-dark-card to-dark-surface text-white font-poppins overflow-x-hidden;
+    background-attachment: fixed;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-black/50;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-neon-cyan to-neon-pink rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply from-neon-cyan/80 to-neon-pink/80;
+  }
+  
+  /* Selection */
+  ::selection {
+    @apply bg-neon-cyan/30 text-white;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Glass Card */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-glass;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-white/8 hover:border-neon-cyan/30 hover:shadow-neon hover:-translate-y-2;
+  }
+  
+  /* Neon Text */
+  .neon-text {
+    @apply text-neon-cyan;
+    text-shadow: 
+      0 0 5px theme('colors.neon.cyan'),
+      0 0 10px theme('colors.neon.cyan'),
+      0 0 20px theme('colors.neon.cyan'),
+      0 0 40px theme('colors.neon.cyan');
+  }
+  
+  /* Neon Border */
+  .neon-border {
+    @apply border-2 border-neon-cyan shadow-neon;
+    box-shadow: 
+      0 0 10px theme('colors.neon.cyan'),
+      inset 0 0 10px rgba(0, 255, 240, 0.1);
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-neon-cyan via-neon-pink to-neon-green bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-bold py-4 px-8 rounded-full;
+    @apply transition-all duration-300 hover:shadow-neon hover:-translate-y-1;
+    @apply relative overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute top-0 left-[-100%] w-full h-full;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    @apply transition-all duration-500;
+  }
+  
+  .btn-primary:hover::before {
+    @apply left-full;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-neon-cyan text-neon-cyan bg-transparent font-bold py-4 px-8 rounded-full;
+    @apply transition-all duration-300 hover:bg-neon-cyan hover:text-black hover:shadow-neon hover:-translate-y-1;
+  }
+  
+  /* Form Styles */
+  .form-input {
+    @apply w-full p-5 bg-white/5 border-2 border-neon-cyan/30 rounded-2xl text-white;
+    @apply backdrop-blur-lg transition-all duration-400 focus:border-neon-cyan focus:bg-white/8;
+    @apply focus:shadow-neon focus:-translate-y-1 outline-none;
+  }
+  
+  .form-input::placeholder {
+    @apply text-white/50 transition-all duration-300;
+  }
+  
+  .form-input:focus::placeholder {
+    @apply text-transparent;
+  }
+  
+  /* Skill Bar */
+  .skill-bar {
+    @apply relative bg-white/10 h-3 rounded-full overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-neon-cyan via-neon-pink to-neon-green rounded-full relative;
+    background-size: 200% 100%;
+    animation: skill-glow 2s ease-in-out infinite alternate;
+  }
+  
+  .skill-progress::after {
+    content: '';
+    @apply absolute top-0 left-0 right-0 bottom-0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: skill-shine 2s infinite;
+  }
+  
+  /* Floating Animation */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Fade Animations */
+  .fade-up {
+    @apply opacity-0 translate-y-12 transition-all duration-700 ease-out;
+  }
+  
+  .fade-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .slide-left {
+    @apply opacity-0 -translate-x-12 transition-all duration-700 ease-out;
+  }
+  
+  .slide-left.animate {
+    @apply opacity-100 translate-x-0;
+  }
+  
+  .slide-right {
+    @apply opacity-0 translate-x-12 transition-all duration-700 ease-out;
+  }
+  
+  .slide-right.animate {
+    @apply opacity-100 translate-x-0;
+  }
+}
+
+/* Utility Styles */
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3cdefs%3e%3cpattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'%3e%3cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='%2300FFF0' stroke-width='0.5' opacity='0.1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e");
+    animation: grid-move 20s linear infinite;
+  }
+  
+  .bg-dots-pattern {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3cdefs%3e%3cpattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'%3e%3ccircle cx='10' cy='10' r='1' fill='%2300FFF0' opacity='0.1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23dots)'/%3e%3c/svg%3e");
+  }
+}
+
+/* Custom Keyframes */
+@keyframes skill-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Ripple Effect */
+.ripple {
+  @apply absolute rounded-full bg-white/60 scale-0 pointer-events-none;
+  animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+  to {
+    @apply scale-[4] opacity-0;
+  }
+}
