@@ -40,6 +40,20 @@
   
   <title>Harsh Pandey - Full Stack Developer & Blockchain Enthusiast</title>
   
+  <!-- Dark Mode Script - Run immediately to prevent flash -->
+  <script>
+    // Set dark mode immediately before page renders
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      // Default to dark mode if no theme is saved
+      const isDark = savedTheme ? savedTheme === 'dark' : true;
+      
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  
   <style>
     /* Critical CSS for initial load */
     body {
