@@ -1,6 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "outputDirectory": "build",
   "rewrites": [
     {
@@ -10,7 +11,7 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/index.html",
       "headers": [
         {
           "key": "Cache-Control",
