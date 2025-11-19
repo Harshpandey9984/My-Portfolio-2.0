@@ -272,8 +272,10 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="#"
-              download
+              href="/assets/files/Harsh_Pandey_Resume.pdf"
+              download="Harsh_Pandey_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-2 border-blue-500 dark:border-neon-cyan bg-transparent text-blue-600 dark:text-neon-cyan font-bold py-4 px-8 rounded-full transition-all duration-300 hover:bg-blue-500 hover:text-white dark:hover:bg-neon-cyan dark:hover:text-black cursor-hover flex items-center shadow-lg dark:shadow-neon cyber-glow data-stream"
             >
               <i className="fas fa-download mr-2" />
