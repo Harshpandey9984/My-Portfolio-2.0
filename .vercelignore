@@ -1,0 +1,14 @@
+# Ignore root HTML portfolio files - only deploy portfolio-futuristic React app
+/*.html
+/*.css
+/*.js
+/public/
+/assets/
+/*.bat
+/*.ps1
+/*.sh
+/*.md
+
+# Keep these important files
+!README.md
+!portfolio-futuristic/
