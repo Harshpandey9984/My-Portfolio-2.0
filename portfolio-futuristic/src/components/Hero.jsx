@@ -197,7 +197,7 @@ const Hero = () => {
               About Me
             </h2>
             <p className="text-base md:text-lg text-gray-800 dark:text-white/90 font-rajdhani leading-relaxed text-left">
-              <span className="text-blue-600 dark:text-neon-cyan">▸</span> I'm a passionate <strong className="text-blue-700 dark:text-neon-cyan">Third Year Computer Science Student</strong> 
+              <span className="text-blue-600 dark:text-neon-cyan">▸</span> I'm a passionate <strong className="text-blue-700 dark:text-neon-cyan">Fourth Year Computer Science Student</strong> 
               with a deep fascination for cutting-edge technology and innovation. My journey in the digital realm spans across 
               <strong className="text-purple-600 dark:text-neon-pink"> full-stack development</strong>, <strong className="text-blue-700 dark:text-neon-cyan">blockchain technology</strong>, 
               and <strong className="text-purple-600 dark:text-neon-pink">creative problem-solving</strong>.
@@ -239,7 +239,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.2 }}
             className="text-lg md:text-xl text-gray-700 dark:text-white/80 font-rajdhani max-w-2xl mx-auto leading-relaxed"
           >
-            <span className="text-blue-600 dark:text-neon-cyan">▸</span> Third Year Computer Science Student • Future Tech Innovator <span className="text-blue-600 dark:text-neon-cyan">◂</span>
+            <span className="text-blue-600 dark:text-neon-cyan">▸</span> Fourth Year Computer Science Student • Future Tech Innovator <span className="text-blue-600 dark:text-neon-cyan">◂</span>
           </motion.p>
 
           {/* CTA Buttons */}
