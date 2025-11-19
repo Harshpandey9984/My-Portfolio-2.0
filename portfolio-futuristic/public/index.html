@@ -42,14 +42,26 @@
   
   <!-- Dark Mode Script - Run immediately to prevent flash -->
   <script>
-    // Set dark mode immediately before page renders
+    // FORCE dark mode as default - run immediately before page renders
     (function() {
+      // Always default to dark mode
       const savedTheme = localStorage.getItem('theme');
-      // Default to dark mode if no theme is saved
-      const isDark = savedTheme ? savedTheme === 'dark' : true;
       
-      if (isDark) {
+      // If no saved theme, set dark mode as default
+      if (!savedTheme) {
+        localStorage.setItem('theme', 'dark');
         document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+      } else if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+      }
+      
+      // Ensure dark class is present by default
+      if (!document.documentElement.classList.contains('dark') && savedTheme !== 'light') {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
       }
     })();
   </script>

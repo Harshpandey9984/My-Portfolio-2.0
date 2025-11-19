@@ -39,14 +39,26 @@ body {
 
 html {
   scroll-behavior: smooth;
+  background: #000000;
+}
+
+/* Force dark mode as default */
+html, html.dark {
+  background: #000000;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(ellipse at center, #0a0a1a 0%, #000005 70%, #000000 100%);
-  color: white;
+  background: radial-gradient(ellipse at center, #0a0a1a 0%, #000005 70%, #000000 100%) !important;
+  color: white !important;
   overflow-x: hidden;
   position: relative;
+}
+
+/* Ensure dark mode is default */
+body.dark, .dark body {
+  background: radial-gradient(ellipse at center, #0a0a1a 0%, #000005 70%, #000000 100%) !important;
+  color: white !important;
 }
 
 body::before {
