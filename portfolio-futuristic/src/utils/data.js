@@ -318,7 +318,7 @@ export const achievements = [
 ];
 
 export const contactInfo = {
-  email: "harshpandey9984@gmail.com",
+  email: "hp7556513@gmail.com",
   phone: "+91 XXXXXXXXXX",
   location: "India",
   availability: "Available for freelance projects and full-time opportunities",
@@ -346,7 +346,7 @@ export const socialLinks = [
   },
   {
     name: "Email",
-    url: "mailto:harshpandey9984@gmail.com",
+    url: "mailto:hp7556513@gmail.com",
     icon: "fas fa-envelope",
     color: "#ea4335"
   }

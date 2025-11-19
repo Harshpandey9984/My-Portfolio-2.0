@@ -148,8 +148,8 @@ const Footer = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex items-center space-x-3 text-white/70">
                   <i className="fas fa-envelope text-neon-cyan" />
-                  <a href="mailto:harshpandey9984@gmail.com" className="hover:text-neon-cyan transition-colors cursor-hover">
-                    harshpandey9984@gmail.com
+                  <a href="mailto:hp7556513@gmail.com" className="hover:text-neon-cyan transition-colors cursor-hover">
+                    hp7556513@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-white/70">

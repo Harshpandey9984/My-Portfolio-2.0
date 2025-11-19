@@ -65,8 +65,8 @@ const Contact = () => {
     {
       icon: 'fas fa-envelope',
       label: 'Email',
-      value: 'harshpandey9984@gmail.com',
-      link: 'mailto:harshpandey9984@gmail.com'
+      value: 'hp7556513@gmail.com',
+      link: 'mailto:hp7556513@gmail.com'
     },
     {
       icon: 'fab fa-github',
